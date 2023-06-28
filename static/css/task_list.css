@@ -1,0 +1,65 @@
+.container-fluid {
+    position: relative;
+}
+
+.todo__frame {
+    width: 35%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+}
+
+.list-group .list-group-item {
+
+}
+
+.list-group-item .left {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.list-group-item .right {
+    justify-content: space-between;
+    width: 120px;
+}
+
+.list-group-item .right .btn {
+    width: 54px;
+    font-size: 18px;
+}
+
+.frame__header {
+    background-color: #F0F0F0;
+    border-bottom: 1px solid gainsboro;
+    padding: 10px 15px 5px 15px;
+}
+
+.frame__header .title {
+    font-size: 1.5em;
+}
+
+.frame__content {
+    padding: 20px;
+}
+
+.frame__content .form__control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.frame__content .form__control .input__default {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 20px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid gainsboro;
+}
+
+.frame__content .form__control .btn {
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+}

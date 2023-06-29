@@ -7,5 +7,16 @@
 
 .container__main {
     width: 100%;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-gradient {
+    background-color: rgb(56,49,90);
+}
+
+.br-radius-10 {
+    border-radius: 10px;
 }

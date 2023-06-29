@@ -13,8 +13,9 @@
             <h1 class="title">Todos ({{ total_tasks }})</h1>
         </section>
         <section class="frame__content">
-            <form class="form__control">
-                <input type="text" placeholder="Enter todo here" class="input__default">
+            <form class="form__control" method="POST" action="{% url 'tasks' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <ul class="list-group">
@@ -35,7 +36,10 @@
                   </div>
                   <div class="right d-flex flex-row">
                       <a class="btn btn-success bi bi-pencil-square" href="#"></a>
-                      <a class="btn btn-danger bi bi-trash" href="#"></a>
+                      <form action="{% url 'delete_task' task.id %}" method="post">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-danger bi bi-trash"></button>
+                      </form>
                   </div>
               </li>
             {% endfor %}

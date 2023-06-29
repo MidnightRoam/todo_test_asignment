@@ -1,10 +1,6 @@
-.container-fluid {
-    position: relative;
-}
-
 .todo__frame {
     width: 35%;
-    height: 50%;
+    height: auto;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid gainsboro;
@@ -41,6 +37,7 @@
 }
 
 .frame__content {
+    width: 100%;
     padding: 20px;
 }
 
@@ -52,9 +49,10 @@
 }
 
 .frame__content .form__control .input__default {
-    width: 100%;
+    width: 500px;
+    max-width: 50%;
     padding: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 5px 0px 0px 5px;
     border: 1px solid gainsboro;
 }

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/auth_styles.css' %}">
+{% endblock %}
+
+{% block header %} {% endblock %}
+
+{% block content %}
+<div class="container__main bg-gradient">
+    <div class="auth__card br-radius-10">
+        <div class="card__header">
+            <a href="{% url 'login' %}" class="card__link">SIGN IN</a>
+            <a href="{% url 'registration' %}" class="card__link active">SIGN UP</a>
+        </div>
+        <div class="card__controls">
+            <form class="form__control">
+                <label for="email" class="input__label">Email</label>
+                <input type="email" id="email" class="auth__input">
+                <label for="password" class="input__label">Password</label>
+                <input type="password" id="password" class="auth__input">
+                <label for="password" class="input__label">Repeat password</label>
+                <input type="password" id="password2" class="auth__input">
+
+                <button class="btn btn__auth" type="submit">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

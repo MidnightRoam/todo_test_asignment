@@ -48,9 +48,8 @@
 
 }
 
-.frame__content .form__control .input__default {
-    width: 500px;
-    max-width: 50%;
+.input__default {
+    width: 554px;
     padding: 7px;
     margin-bottom: 10px;
     border-radius: 5px 0px 0px 5px;
@@ -60,4 +59,22 @@
 .frame__content .form__control .btn {
     border-radius: 0px 5px 5px 0px;
     height: 40px;
+}
+
+.index__content .title {
+    background-color: gainsboro;
+    padding: 10px;
+    font-size: 1em;
+    width: 35%;
+    border-radius: 5px;
+}
+
+.form_update {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 20px;
 }

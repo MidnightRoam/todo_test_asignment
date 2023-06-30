@@ -1,5 +1,5 @@
 .auth__card {
-    background-color: rgb(56,49,90);
+    background-color: gainsboro;
     width: 500px;
     height: auto;
     padding: 40px;
@@ -42,7 +42,7 @@
 }
 
 .card__header .active {
-    color: #fff;
+    color: #252525;
     border-bottom: 2px solid #eec110;
 }
 

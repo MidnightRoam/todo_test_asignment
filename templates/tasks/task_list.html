@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/pagination.css' %}">
 {% endblock %}
 
+{% block title %}{{ title }}{% endblock %}
+
 {% block content %}
 <div class="container__main d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
     <section class="todo__frame">
@@ -22,21 +24,14 @@
             {% for task in tasks %}
               <li class="list-group-item list-group-item__custom d-flex flex-row justify-content-between">
                   <div class="left d-flex flex-row">
-                      {% if task.status %}
                       <label class="">
-                          <input type="checkbox" checked>
+                          <input type="checkbox" id="taskCheckbox" data-task-id="{{ task.id }}" {% if task.status %}checked{% endif %}>
                           {{ task.title }}
                       </label>
-                      {% else %}
-                      <label class="">
-                          <input type="checkbox">
-                          {{ task.title }}
-                      </label>
-                      {% endif %}
                   </div>
                   <div class="right d-flex flex-row">
-                      <a class="btn btn-success bi bi-pencil-square" href="#"></a>
-                      <form action="{% url 'delete_task' task.id %}" method="post">
+                      <a class="btn btn-success bi bi-pencil-square" href="{% url 'update_task' task.pk %}"></a>
+                      <form action="{% url 'delete_task' task.pk %}" method="post">
                           {% csrf_token %}
                           <button type="submit" class="btn btn-danger bi bi-trash"></button>
                       </form>

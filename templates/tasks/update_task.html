@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/task_list.css' %}">
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container__main">
+    <section class="index__content">
+        <form action="" class="form_update" method="post">
+            {% csrf_token %}
+            <h1 class="title">Current title: {{ task.title }}</h1>
+            {{ form }}
+            <button class="btn btn-primary">Apply changes</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

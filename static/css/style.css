@@ -20,3 +20,8 @@
 .br-radius-10 {
     border-radius: 10px;
 }
+
+.navbar {
+    position: absolute;
+    width: 100%;
+}

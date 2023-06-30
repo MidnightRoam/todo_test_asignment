@@ -2,7 +2,15 @@
 {% load static %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/index_page_styles.css' %}">
 {% endblock %}
-<div class="container">
 
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container__main">
+    <section class="index__content">
+        <a href="{% url 'tasks' %}" class="btn btn-primary">Tasks</a>
+    </section>
 </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.index__content {
+    width: 500px;
+    height: 250px;
+}
+
+.index__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index__content .btn {
+    width: 100%;
+    font-size: 2em;
+}
